@@ -206,6 +206,33 @@ background: #1F1E1E;
     width: calc(33.333% - 40px);
 }
 
+.reserve {
+    display: grid;
+    grid-template-columns: 405px 1fr;
+    grid-template-areas: 
+    "checkbox scheme"
+    "order legend";
+    gap: 65px 11%;
+    width: 100%;
+}
+
+.reserve__checkbox {
+    grid-area: "checkbox";
+    background-color: #BC3324;
+}
+.reserve__scheme {
+    grid-area: "scheme";
+    background-color: aqua;
+}
+.reserve__order {
+    grid-area: "order";
+    background-color: blueviolet;
+}
+.reserve__legend {
+    grid-area: "legend";
+    background-color: blue;
+}
+
 .main{
     flex: 1 0 auto;
     /*background-color: blueviolet;*/
