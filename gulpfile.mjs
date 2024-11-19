@@ -17,6 +17,7 @@ import imagemin_optipng from "imagemin-optipng";
 import svgmin from "gulp-svgmin";
 import svgstore from "gulp-svgstore";
 import server from "browser-sync";
+
 const resources = {
   html: "src/html/**/*.html",
   jsDev: "src/scripts/dev/**/*.js",
@@ -25,7 +26,7 @@ const resources = {
   less: "src/styles/**/*.less",
   svgSprite: "src/assets/svg-sprite/*.svg",
   static: [
-    "src/assets/icons/**/*.*",
+    "src/assets/favicons/**/*.*",
     "src/assets/icons/**/*.*",
     "src/assets/fonts/**/*.{woff,woff2}",
     "src/assets/video/**/*.{mp4,webm}",
@@ -103,12 +104,12 @@ function copy() {
 }
 function images() {
   return gulp
-    .src(resources.images)
+    .src(resources.images, { encoding: false })
     .pipe(
       imagemin([
         imagemin_gifsicle({ interlaced: true }),
         imagemin_mozjpeg({ quality: 100, progressive: true }),
-        imagemin_optipng({ optimizationLevel: 3 })
+        imagemin_optipng({ optimizationLevel: 5 })
       ])
     )
     .pipe(gulp.dest("dist/assets/images"));
