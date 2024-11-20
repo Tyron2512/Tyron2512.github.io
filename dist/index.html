@@ -5,16 +5,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles\styles.css" />
+  <link rel="stylesheet" href="styles\styles.min.css" />
 </head>
 
 <body class="body">
 
-  <link rel="stylesheet" href="src/styles/styles.css">
+  <link rel="stylesheet" href="styles/styles.min.css">
   <header class="page-header">
     <div class="page-header__container">
       <a href="#" class="page-header__logo">
-        <img src="src\assets\images\logo.svg" class="page-header__logo-icon" alt="logo" />
+        <svg class="page-header__logo-icon" width="202" height="147">
+          <use xlink:href="assets/icons/symbols.svg#logo"></use>
+        </svg>
       </a>
       <nav class="page-header__nav">
         <a href="#" class="page-header__nav-link">Мероприятия</a>
@@ -35,7 +37,6 @@
                                             </svg>                                
             </a> -->
       </div>
-
     </div>
   </header>
   <main class="main">
