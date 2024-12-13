@@ -17,7 +17,6 @@ import imagemin_optipng from "imagemin-optipng";
 import svgmin from "gulp-svgmin";
 import svgstore from "gulp-svgstore";
 import server from "browser-sync";
-
 const resources = {
   html: "src/html/**/*.html",
   jsDev: "src/scripts/dev/**/*.js",
@@ -31,8 +30,8 @@ const resources = {
     "src/assets/fonts/**/*.{woff,woff2}",
     "src/assets/video/**/*.{mp4,webm}",
     "src/assets/audio/**/*.{mp3,ogg,wav,aac}",
-    // "src/json/**/*.json",
-    // "src/php/**/*.php"
+    "src/json/**/*.json",
+    "src/php/**/*.php"
   ]
 };
 // Gulp Tasks:
@@ -112,7 +111,7 @@ function images() {
         imagemin_optipng({ optimizationLevel: 5 })
       ])
     )
-    .pipe(gulp.dest("dist/assets/images"));
+    .pipe(gulp.dest('dist/assets/images'));
 }
 function svgSprite() {
   return gulp
